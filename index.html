@@ -10,29 +10,28 @@
 <meta property="og:description" content="">
 <meta property="og:image" content="">
 <style>
-  html, body { margin: 0; background: #000; color: #fff; font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-  main { max-width: 520px; margin: 0 auto; padding: 8px 24px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+  html, body { margin: 0; background: #000; color: #fff; font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 520px; margin: 0 auto; padding: 8px 24px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; }
   #spread { width: 100%; height: auto; display: block; cursor: pointer; user-select: none; -webkit-user-select: none; }
   .info p, .info a { margin: 0; display: block; }
   .info { display: flex; flex-direction: column; gap: 6px; text-transform: uppercase; }
-  .drop { color: #ff2a1f; margin: 0; padding: 12px 24px; text-align: center; text-transform: uppercase; animation: blink 1s steps(2, start) infinite; }
-  a.buy { color: #22ff33; text-decoration: underline; animation: blink 1s steps(2, start) infinite; }
-  @media (prefers-reduced-motion: reduce) { a.buy { animation: none; } }
+  a.buy { color: #fff; text-decoration: underline; animation: blink 1s steps(2, start) infinite; }
+  .drop { color: #ff2a1f; margin: 0; padding: 24px; text-align: center; text-transform: uppercase; animation: blink 1s steps(2, start) infinite; }
   @keyframes blink { to { visibility: hidden; } }
-  @media (prefers-reduced-motion: reduce) { .drop { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .drop, a.buy { animation: none; } }
 </style>
 </head>
 <body>
-<p class="drop">24 hours only gone july 12</p>
 <main>
   <img id="spread" src="img/1.jpg" alt="">
   <div class="info">
     <p>Dan Alves Photos Book</p>
     <p>$41</p>
     <p>Ships in 2 weeks</p>
-    <a class="buy" href="https://buy.stripe.com/28E3cw0Hh06KcTw2sMgbm0J">Buy</a>
+    <a class="buy" href="https://buy.stripe.com/28E3cw0Hh06KcTw2sMgbm0J">Purchase here</a>
   </div>
 </main>
+<p class="drop">24 hours only gone july 12</p>
 <script>
   (function () {
     var img = document.getElementById('spread');
