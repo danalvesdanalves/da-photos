@@ -31,7 +31,7 @@
     <a class="buy" href="https://buy.stripe.com/28E3cw0Hh06KcTw2sMgbm0J">Purchase here</a>
   </div>
 </main>
-<p class="drop">24 hours only gone july 12</p>
+<p class="drop">Only available for <span id="countdown">24:00:00</span></p>
 <script>
   (function () {
     var img = document.getElementById('spread');
@@ -42,6 +42,19 @@
       i = (i + 1) % srcs.length;
       img.src = srcs[i];
     });
+
+    // Drop deadline — edit this ISO datetime to move the countdown.
+    var DEADLINE = new Date('2026-07-11T21:00:00-07:00').getTime();
+    var el = document.getElementById('countdown');
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function tick() {
+      var ms = DEADLINE - Date.now();
+      if (ms <= 0) { el.textContent = '00:00:00'; return; }
+      var s = Math.floor(ms / 1000);
+      el.textContent = pad(Math.floor(s / 3600)) + ':' + pad(Math.floor((s % 3600) / 60)) + ':' + pad(s % 60);
+    }
+    tick();
+    setInterval(tick, 1000);
   })();
 </script>
 </body>
