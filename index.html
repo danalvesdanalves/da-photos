@@ -10,23 +10,29 @@
 <meta property="og:description" content="">
 <meta property="og:image" content="">
 <style>
-  html, body { margin: 0; background: #fff; color: #111; font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-  .page { max-width: 900px; margin: 0 auto; padding: 32px 24px 64px; display: flex; flex-direction: column; gap: 32px; align-items: center; }
-  header { width: 100%; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #6b6b6b; }
-  .spreads { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+  html, body { margin: 0; background: #000; color: #fff; font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 520px; margin: 0 auto; padding: 48px 24px 96px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px; }
+  .spreads { display: flex; flex-direction: column; gap: 16px; width: 100%; }
   .spreads img { width: 100%; height: auto; display: block; }
-  a.buy { display: inline-block; padding: 14px 32px; border: 1px solid #111; border-radius: 4px; color: #111; text-decoration: none; font-weight: 500; font-size: 15px; }
-  a.buy:hover, a.buy:focus-visible { background: #111; color: #fff; outline: none; }
+  .info { display: flex; flex-direction: column; gap: 32px; }
+  .drop { color: #ff2a1f; text-transform: uppercase; }
+  .title, .ships, .price { text-transform: uppercase; }
+  a.buy { color: #fff; text-decoration: underline; text-transform: uppercase; }
 </style>
 </head>
 <body>
-<div class="page">
-  <header>da photos</header>
+<main>
   <div class="spreads">
-    <img src="img/1.jpg" alt="Book spread">
-    <img src="img/2.jpg" alt="Book spread">
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
   </div>
-  <a class="buy" href="https://buy.stripe.com/28E3cw0Hh06KcTw2sMgbm0J">buy</a>
-</div>
+  <div class="info">
+    <p class="drop">24 hours only gone july 12</p>
+    <p class="title">Dan Alves Photos Book</p>
+    <p class="price">$41</p>
+    <p class="ships">Ships in 2 weeks</p>
+    <a class="buy" href="https://buy.stripe.com/28E3cw0Hh06KcTw2sMgbm0J">Buy</a>
+  </div>
+</main>
 </body>
 </html>
