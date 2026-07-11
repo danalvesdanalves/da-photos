@@ -16,7 +16,8 @@
   .info p, .info a { margin: 0; display: block; }
   .info { display: flex; flex-direction: column; gap: 6px; text-transform: uppercase; }
   .drop { color: #ff2a1f; margin: 0; padding: 12px 24px; text-align: center; text-transform: uppercase; animation: blink 1s steps(2, start) infinite; }
-  a.buy { color: #fff; text-decoration: underline; }
+  a.buy { color: #22ff33; text-decoration: underline; animation: blink 1s steps(2, start) infinite; }
+  @media (prefers-reduced-motion: reduce) { a.buy { animation: none; } }
   @keyframes blink { to { visibility: hidden; } }
   @media (prefers-reduced-motion: reduce) { .drop { animation: none; } }
 </style>
